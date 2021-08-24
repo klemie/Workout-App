@@ -1,3 +1,57 @@
+$background_color:#e0e0e0;
+$border-color: #C2C2C2;
+
+@mixin flexCenterContainer {
+    position: relative;
+}
+
+@mixin flexCenter($left, $top, $horizontal, $vertical) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate($vertical, $horizontal);
+}
+
+.containerCenter {
+    @include flexCenterContainer;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    height: 120px;
+}
+
+
+
 .nav {
-    background: fixed;
+    @include flexCenter(50%, 50%, -50%, -50%);
+    height: 70px;
+    background-color: $background_color;
+    border-radius: 13px;
+    border: solid 1.5px $border-color;
+    width: 200px;
+
+    div {
+        border: solid 1px $border-color;
+    }
+
+    ion-col {
+        position: relative;
+    }
+
+    ion-item {
+        --background: $background_color;
+        @include flexCenter(50%, 100%, -10%, -50%);
+        width: 60px;
+
+        ion-icon {
+            @include flexCenter(37%, 50%, -50%, -63%);
+        }
+    }
+
+    .btn {
+        --border-radius: 13px;
+        --border-color: #C2C2C2;
+        --border-width: 2px;
+        --padding-end: 0px;
+    }
 }

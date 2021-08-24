@@ -1,7 +1,54 @@
+.containerCenter {
+  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  height: 120px;
+}
+
 .nav {
-  background: fixed;
-  background-color: #E0E0E0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 70px;
+  background-color: #e0e0e0;
   border-radius: 13px;
+  border: solid 1.5px #C2C2C2;
+  width: 200px;
+}
+
+.nav div {
   border: solid 1px #C2C2C2;
+}
+
+.nav ion-col {
+  position: relative;
+}
+
+.nav ion-item {
+  --background: $background_color;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  width: 60px;
+}
+
+.nav ion-item ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  -webkit-transform: translate(-63%, -50%);
+          transform: translate(-63%, -50%);
+}
+
+.nav .btn {
+  --border-radius: 13px;
+  --border-color: #C2C2C2;
+  --border-width: 2px;
+  --padding-end: 0px;
 }
 /*# sourceMappingURL=nav.css.map */
