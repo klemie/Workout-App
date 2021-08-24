@@ -1,0 +1,10 @@
+/* load Save buttons */
+.loadSaveBtns{
+    height: 45px;
+    --backgroud: #ededed;
+    color: #666666;
+}
+.flexCenter{
+    display: flex;
+    justify-content:center;
+  }
